@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Quiz</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+        <!-- Navbar ko load karne ke liye ek div -->
+    <div id="navbar-container"></div>
+    <div class="quiz-container">
+        <h1 class="exam-title">📝 Exam Quiz</h1>
+
+        <!-- Course Selection -->
+        <div id="courseList" class="course-buttons">
+            <button class="course-btn btn-blue" onclick="loadQuiz('webdev')">Web Development</button>
+            <button class="course-btn btn-green" onclick="loadQuiz('datasci')">Data Science</button>
+            <button class="course-btn btn-red" onclick="loadQuiz('ai')">Artificial Intelligence</button>
+        </div>
+        
+        <!-- Quiz Section -->
+        <div id="quizContainer" class="quiz-container hidden">
+            <h2 id="question" class="question"></h2>
+            <div id="options" class="options"></div>
+            <p id="timer" class="timer"></p>
+        </div>
+
+        <!-- Result Section -->
+        <div id="resultContainer" class="hidden">
+            <h2 class="result-title">📊 Your Score</h2>
+            <p id="correctAnswers" class="correct-answers"></p>
+            <p id="wrongAnswers" class="wrong-answers"></p>
+            <p id="incorrectList" class="incorrect-list"></p>
+            <button onclick="restartQuiz()" class="btn btn-purple">Restart Quiz</button>
+        </div>
+    </div>
+    <!-- footer code -->
+    <div id="footer-container"></div>
+    <script src="/js file/quiz.js"></script>
+    <script src="../js file/script.js"></script>
+    
+</body>
+</html>
